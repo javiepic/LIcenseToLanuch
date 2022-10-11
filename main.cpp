@@ -3,15 +3,28 @@ using namespace std;
 int Days(int);
 
 int main() {
-  int n;
+int n;
+  cin >> n;
+  int smalls_Days;
+  for (int i = 0; i < n; i++)
+    {
+      int day;
+      cin >> day;
+      
+      if (smalls_Days >= day)
+      {
+        smalls_Days = day;
+        }
+      else
+        break;
+    }
+  cout << smalls_Days;
+return 0;
+}
+int Days(int)
+{ int n;
   int I;
   cin >> n;
-  Days(I);
-  
-    cout << "Lanuch on " << I << endl;
-}
-int Days(int n)
-{
   int smalls_Days;
   for (int i = 0; i < n; i++)
     {
@@ -19,8 +32,11 @@ int Days(int n)
       cin >> day;
       
       if (smalls_Days > day)
+      {
         smalls_Days = day;
-      break;
+        }
+      else
+        break;
     }
   return smalls_Days;
 }
